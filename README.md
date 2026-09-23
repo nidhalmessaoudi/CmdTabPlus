@@ -12,7 +12,7 @@ A centered, native switcher with a window list that expands to the right. Liquid
 
 **macOS 13 or later · Apple silicon and Intel**
 
-1. [Download the latest release](https://github.com/nidhalmessaoudi/CmdTabPlus/releases/latest), unzip it, and move **CmdTabPlus.app** to **Applications**.
+1. [Download the latest release](https://github.com/nidhalmessaoudi/CmdTabPlus/releases/latest), open the DMG, and drag **CmdTabPlus** to **Applications**. A ZIP is also available.
 2. Open the app. This first release is **ad-hoc signed, not Developer ID signed or notarized**. If macOS blocks it, follow [Apple’s Open Anyway instructions](https://support.apple.com/en-us/102445) in **System Settings → Privacy & Security**.
 3. Allow **CmdTabPlus** in **Privacy & Security → Accessibility**, then enable it from its menu-bar icon.
 
@@ -39,6 +39,6 @@ open build/CmdTabPlus.app
 swift test
 ```
 
-`./Scripts/package-release.sh` builds a universal app and creates a ZIP plus SHA-256 checksum in `dist/`. Set `CODE_SIGN_IDENTITY` to use your own signing identity; notarization is separate.
+`./Scripts/package-release.sh` builds a universal app and creates a DMG, ZIP, and SHA-256 checksums in `dist/`. Set `CODE_SIGN_IDENTITY` to use your own signing identity; notarization is separate.
 
 [MPL-2.0 license](LICENSE)

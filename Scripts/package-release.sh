@@ -9,3 +9,4 @@ rm -f "dist/$archive"
 ditto -c -k --sequesterRsrc --keepParent build/CmdTabPlus.app "dist/$archive"
 (cd dist && shasum -a 256 "$archive" > "$archive.sha256")
 printf 'Packaged dist/%s\n' "$archive"
+./Scripts/make-dmg.sh build/CmdTabPlus.app
